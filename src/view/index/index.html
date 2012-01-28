@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/application.css">
+	</head>
+	<body>
+		<div id="app">
+			<h1>Todos:</h1>
+			<form action="/todo/create" method="post">
+				<input type="text" name="subject" placeholder="Enter your todo item">
+				<input type="submit" value="Save">
+			</form>
+			<ul class="items">
+			</ul>
+			<footer>
+				<span class="countVal">0</span> todos left.
+			</footer>
+		</div>
+		<script type="text/javascript" src="http://localhost:9294/application.js"></script>
+
+		<script type="text/javascript">
+			$ = require("jqueryify");
+			App = require("index");
+
+			$(function() {
+				new App({el: $("#app")});
+			});
+
+		</script>
+	</body>
+</html>

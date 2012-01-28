@@ -1,0 +1,7 @@
+<li id="<%= @id %>">
+<input type="checkbox" name="todo[]" value="<%= @id %>" id="checkbox-<%= @id %>" <% if @done: %>checked="checked"<% end %>>
+	<label for="checkbox-<%= @id %>"><%= @subject %></label>
+	<div class="edit">
+		<input type="text" value="<%= @subject %>">
+	</div>
+</li>
