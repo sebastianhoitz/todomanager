@@ -1,0 +1,9 @@
+*.un~
+/frontend/node_modules
+/priv/static/application.js
+/priv/static/application.css
+erl_crash.dump
+*.beam
+/ebin
+/log
+/tetrapak/.local.cache
