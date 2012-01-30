@@ -2,8 +2,6 @@ Spine = require("spine")
 $ = Spine.$
 Model = require("models/todo")
 
-console.log Model
-
 class TodoItem extends Spine.Controller
 	events:
 		"change input[type=checkbox]": "toggle"
@@ -20,7 +18,6 @@ class TodoItem extends Spine.Controller
 		@item.bind("destroy", @remove)
 
 	render: =>
-		@log @item
 		@replace $(require("views/todo/todo")(@item))
 		@
 
